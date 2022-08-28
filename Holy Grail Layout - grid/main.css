@@ -1,0 +1,35 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(6, 253px);
+  grid-template-rows: repeat(6, 118px);
+}
+
+header {
+  background-color: green;
+  grid-column: 1 / 7;
+  grid-row: 1 / 2;
+}
+
+nav {
+  background-color: yellow;
+  grid-column: 1 / 2;
+  grid-row: 2 / 6;
+}
+
+main {
+  background-color: purple;
+  grid-column: 2 / 6;
+  grid-row: 2 / 6;
+}
+
+aside {
+  background-color: orange;
+  grid-column: 6 / 7;
+  grid-row: 2 / 6;
+}
+
+footer {
+  background-color: brown;
+  grid-column: 1 / 7;
+  grid-row: 6 / 7;
+}

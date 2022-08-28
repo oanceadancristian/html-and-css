@@ -1,0 +1,37 @@
+.static {
+  position: static;
+  background-color: lightgreen;
+  border: 2px solid green;
+}
+
+.relative {
+  position: relative;
+  left: 300px;
+  width: 300px;
+  height: 300px;
+  background-color: lightgreen;
+  border: 2px solid green;
+}
+
+.absolute {
+  position: absolute;
+  top: 100px;
+  width: 150px;
+  height: 150px;
+  background-color: lightgreen;
+  border: 2px solid green;
+}
+
+.fixed {
+  position: fixed;
+  bottom: 100px;
+  background-color: lightgreen;
+  border: 2px solid green;
+}
+
+.sticky {
+  position: sticky;
+  top: 0%;
+  background-color: lightgreen;
+  border: 2px solid green;
+}

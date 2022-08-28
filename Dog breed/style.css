@@ -1,0 +1,81 @@
+body {
+  background-color: beige;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.container-1 {
+  width: 20%;
+}
+
+ul {
+  list-style: none;
+  margin-right: 75px;
+  margin-left: -30px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#beagle {
+  color: blue;
+}
+
+.container-2 {
+  border-left: 1px solid lightgray;
+  width: 80%;
+}
+
+img {
+  width: 20%;
+  border-radius: 50%;
+  border: 1px solid lightgray;
+  display: block;
+  margin: auto;
+}
+
+.description {
+  margin-left: 20px;
+}
+
+.intro-1,
+.intro-2,
+.intro-3 {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.weight,
+.coat,
+.color {
+  font-weight: bold;
+}
+
+.info-1 {
+  margin-left: 25px;
+}
+
+.info-2 {
+  margin-left: 42px;
+}
+
+.info-3 {
+  margin-left: 36px;
+}
+
+.text {
+  margin-top: 50px;
+}

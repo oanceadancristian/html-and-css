@@ -1,0 +1,2654 @@
+/************************** GENERAL **************************/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #10141f;
+  color: #dde2e5;
+}
+
+h3 {
+  margin-bottom: 0.5em;
+  font-weight: normal;
+}
+
+p,
+li {
+  color: #a2a8b6;
+}
+
+li {
+  margin-left: -0.25em;
+}
+
+nav {
+  background-color: #161d2f;
+  height: 7.5vh;
+  margin: 1em;
+  border-radius: 1em;
+}
+
+.fa-clapperboard {
+  color: #ff4446;
+}
+
+.fa-table-cells-large {
+  color: white;
+}
+
+.fa-film {
+  color: #5b698e;
+}
+
+.fa-tv {
+  color: #5b698e;
+}
+
+.fa-solid.fa-bookmark.fa-2xl.fa-nav {
+  position: static;
+}
+
+.last-icon {
+  width: 2em;
+  height: 2em;
+  background: url('/images/avatar.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: 0.1em solid white;
+  border-radius: 50%;
+}
+
+.fa-magnifying-glass {
+  color: white;
+}
+
+input[type='search'] {
+  background-color: #10141f;
+  color: #d0d4dd;
+  font-weight: bold;
+  border: none;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 3em;
+  padding-left: 10%;
+}
+
+input[type='search']:focus {
+  outline: none;
+}
+
+.fa-bookmark {
+  color: #5b698e;
+}
+
+.fa-xs {
+  color: #a2a8b6;
+}
+
+.fa-circle {
+  opacity: 0.4;
+}
+
+/******************** MEDIA QUERRY - MAX 768 PX ********************/
+
+@media (max-width: 768px) {
+  html {
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  body {
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  h3 {
+    font-size: 0.9em;
+  }
+
+  p,
+  li {
+    font-size: 0.7em;
+  }
+
+  h4 {
+    font-size: 0.8em;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .first-icon {
+    margin-left: 4%;
+  }
+
+  .middle-icons {
+    margin: 0 auto;
+    display: flex;
+  }
+
+  .middle-icons > div {
+    margin: 0 0.75em;
+  }
+
+  .last-icon {
+    margin-right: 4%;
+  }
+
+  .search-box {
+    padding: 1em;
+    margin: 0.5em 0;
+    position: relative;
+  }
+
+  .fa-solid.fa-magnifying-glass {
+    position: absolute;
+    top: 50%;
+    left: 4%;
+  }
+
+  .trending {
+    padding: 1em;
+  }
+
+  .trending-movies {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .trending-1 {
+    width: 100%;
+    height: 10em;
+    border-radius: 0.75em;
+    background: url('/images/trending-1.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
+
+  .trending-1-intro-header {
+    display: flex;
+    position: absolute;
+    top: 60%;
+    left: 5%;
+  }
+
+  .trending-1-intro-header p {
+    margin-right: 2em;
+  }
+
+  .trending-1-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .trending-1-intro-header li:last-of-type {
+    visibility: hidden;
+  }
+
+  .trending-1 h4 {
+    position: absolute;
+    top: 75%;
+    left: 5%;
+  }
+
+  .trending-2 {
+    width: 100%;
+    height: 10em;
+    border-radius: 0.75em;
+    background: url('/images/trending-2.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    left: 68%;
+  }
+
+  .trending-2-intro-header {
+    display: flex;
+    position: absolute;
+    top: 60%;
+    left: 3%;
+  }
+
+  .trending-2-intro-header p {
+    margin-right: 2em;
+  }
+
+  .trending-2-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .trending-2-intro-header li:last-of-type {
+    visibility: hidden;
+  }
+
+  .trending-2 h4 {
+    position: absolute;
+    top: 75%;
+    left: 3%;
+  }
+
+  .trending-3 {
+    visibility: hidden;
+  }
+
+  .recommended {
+    padding: 1em;
+    margin-bottom: 3em;
+  }
+
+  .recommended-movies {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+  }
+
+  .recommended-movies > div {
+    height: 7.5em;
+    margin-bottom: 4em;
+    border-radius: 0.75em;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .recommended-1 {
+    background: url('/images/recommended-1.webp');
+    position: relative;
+  }
+
+  .recommended-1-intro-header {
+    width: 130%;
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-1-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-1-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-1 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-2 {
+    background: url('/images/recommended-2.webp');
+    position: relative;
+  }
+
+  .recommended-2-intro-header {
+    width: 130%;
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-2-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-2-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-2 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-3 {
+    background: url('/images/recommended-3.webp');
+    position: relative;
+  }
+
+  .recommended-3-intro-header {
+    width: 130%;
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-3-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-3-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-3 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-4 {
+    background: url('/images/recommended-4.webp');
+    position: relative;
+  }
+
+  .recommended-4-intro-header {
+    width: 130%;
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-4-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-4-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-4 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-5 {
+    background: url('/images/recommended-5.webp');
+    position: relative;
+  }
+
+  .recommended-5-intro-header {
+    width: 130%;
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-5-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-5-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-5 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-6 {
+    background: url('/images/recommended-6.webp');
+    position: relative;
+  }
+
+  .recommended-6-intro-header {
+    width: 130%;
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-6-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-6-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-6 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-7 {
+    background: url('/images/recommended-7.webp');
+    position: relative;
+  }
+
+  .recommended-7-intro-header {
+    width: 130%;
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-7-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-7-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-7 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-8 {
+    background: url('/images/recommended-8.webp');
+    position: relative;
+  }
+
+  .recommended-8-intro-header {
+    width: 130%;
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-8-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-8-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-8 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-9 {
+    background: url('/images/recommended-9.webp');
+    position: relative;
+  }
+
+  .recommended-9-intro-header {
+    width: 130%;
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-9-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-9-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-9 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-10 {
+    background: url('/images/recommended-10.webp');
+    position: relative;
+  }
+
+  .recommended-10-intro-header {
+    width: 130%;
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-10-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-10-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-10 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-11 {
+    background: url('/images/recommended-11.webp');
+    position: relative;
+  }
+
+  .recommended-11-intro-header {
+    width: 130%;
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-11-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-11-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-11 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-12 {
+    background: url('/images/recommended-12.webp');
+    position: relative;
+  }
+
+  .recommended-12-intro-header {
+    width: 130%;
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-12-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-12-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-12 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-13 {
+    background: url('/images/recommended-13.webp');
+    position: relative;
+  }
+
+  .recommended-13-intro-header {
+    width: 130%;
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-13-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-13-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-13 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-14 {
+    background: url('/images/recommended-14.webp');
+    position: relative;
+  }
+
+  .recommended-14-intro-header {
+    width: 130%;
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-14-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-14-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-14 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-15 {
+    background: url('/images/recommended-15.webp');
+    position: relative;
+  }
+
+  .recommended-15-intro-header {
+    width: 130%;
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-15-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-15-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-15 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-16 {
+    background: url('/images/recommended-16.webp');
+    position: relative;
+  }
+
+  .recommended-16-intro-header {
+    width: 130%;
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-16-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-16-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-16 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-17 {
+    background: url('/images/recommended-17.webp');
+    position: relative;
+  }
+
+  .recommended-17-intro-header {
+    width: 130%;
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-17-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-17-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-17 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-18 {
+    background: url('/images/recommended-18.webp');
+    position: relative;
+  }
+
+  .recommended-18-intro-header {
+    width: 130%;
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-18-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-18-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-18 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-19 {
+    background: url('/images/recommended-19.webp');
+    position: relative;
+  }
+
+  .recommended-19-intro-header {
+    width: 130%;
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-19-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-19-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-19 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-20 {
+    background: url('/images/recommended-20.webp');
+    position: relative;
+  }
+
+  .recommended-20-intro-header {
+    width: 130%;
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-20-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-20-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-20 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-21 {
+    background: url('/images/recommended-21.webp');
+    position: relative;
+  }
+
+  .recommended-21-intro-header {
+    width: 130%;
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-21-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-21-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-21 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-22 {
+    background: url('/images/recommended-22.webp');
+    position: relative;
+  }
+
+  .recommended-22-intro-header {
+    width: 130%;
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-22-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-22-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-22 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-23 {
+    background: url('/images/recommended-23.webp');
+    position: relative;
+  }
+
+  .recommended-23-intro-header {
+    width: 130%;
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-23-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-23-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-23 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-24 {
+    background: url('/images/recommended-24.webp');
+    position: relative;
+  }
+
+  .recommended-24-intro-header {
+    width: 130%;
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-24-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-24-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-24 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .fa-circle {
+    position: absolute;
+    top: 0.9em;
+    right: 0.45em;
+  }
+
+  .fa-bookmark {
+    position: absolute;
+    top: 1.25em;
+    right: 0.9em;
+  }
+
+  .fa-video-slash {
+    position: absolute;
+    bottom: 2.25em;
+    right: 0.9em;
+  }
+}
+
+/******************** MEDIA QUERRY - MIN 769 PX ********************/
+
+@media (min-width: 769px) {
+  html {
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  body {
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  h3 {
+    font-size: 1em;
+  }
+
+  p,
+  li {
+    font-size: 0.8em;
+  }
+
+  h4 {
+    font-size: 0.9em;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .first-icon {
+    margin-left: 4%;
+  }
+
+  .middle-icons {
+    margin: 0 auto;
+    display: flex;
+  }
+
+  .middle-icons > div {
+    margin: 0 1em;
+  }
+
+  .last-icon {
+    margin-right: 4%;
+  }
+
+  .search-box {
+    padding: 1em;
+    margin: 0.5em 0;
+    position: relative;
+  }
+
+  .fa-solid.fa-magnifying-glass {
+    position: absolute;
+    top: 50%;
+    left: 4%;
+  }
+
+  .trending {
+    padding: 1em;
+  }
+
+  .trending-movies {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .trending-1 {
+    width: 100%;
+    height: 10em;
+    border-radius: 0.75em;
+    background: url('/images/trending-1.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
+
+  .trending-1-intro-header {
+    display: flex;
+    position: absolute;
+    top: 60%;
+    left: 5%;
+  }
+
+  .trending-1-intro-header p {
+    margin-right: 2em;
+  }
+
+  .trending-1-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .trending-1 h4 {
+    position: absolute;
+    top: 75%;
+    left: 5%;
+  }
+
+  .trending-2 {
+    width: 100%;
+    height: 10em;
+    border-radius: 0.75em;
+    background: url('/images/trending-2.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    left: 68%;
+  }
+
+  .trending-2-intro-header {
+    display: flex;
+    position: absolute;
+    top: 60%;
+    left: 3%;
+  }
+
+  .trending-2-intro-header p {
+    margin-right: 2em;
+  }
+
+  .trending-2-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .trending-2 h4 {
+    position: absolute;
+    top: 75%;
+    left: 3%;
+  }
+
+  .trending-3 {
+    visibility: hidden;
+  }
+
+  .recommended {
+    padding: 1em;
+    margin-bottom: 3em;
+  }
+
+  .recommended-movies {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+  }
+
+  .recommended-movies > div {
+    height: 7.5em;
+    margin-bottom: 4em;
+    border-radius: 0.75em;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .recommended-1 {
+    background: url('/images/recommended-1.webp');
+    position: relative;
+  }
+
+  .recommended-1-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-1-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-1-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-1 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-2 {
+    background: url('/images/recommended-2.webp');
+    position: relative;
+  }
+
+  .recommended-2-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-2-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-2-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-2 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-3 {
+    background: url('/images/recommended-3.webp');
+    position: relative;
+  }
+
+  .recommended-3-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-3-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-3-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-3 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-4 {
+    background: url('/images/recommended-4.webp');
+    position: relative;
+  }
+
+  .recommended-4-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-4-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-4-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-4 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-5 {
+    background: url('/images/recommended-5.webp');
+    position: relative;
+  }
+
+  .recommended-5-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-5-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-5-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-5 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-6 {
+    background: url('/images/recommended-6.webp');
+    position: relative;
+  }
+
+  .recommended-6-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-6-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-6-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-6 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-7 {
+    background: url('/images/recommended-7.webp');
+    position: relative;
+  }
+
+  .recommended-7-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-7-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-7-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-7 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-8 {
+    background: url('/images/recommended-8.webp');
+    position: relative;
+  }
+
+  .recommended-8-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-8-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-8-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-8 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-9 {
+    background: url('/images/recommended-9.webp');
+    position: relative;
+  }
+
+  .recommended-9-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-9-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-9-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-9 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-10 {
+    background: url('/images/recommended-10.webp');
+    position: relative;
+  }
+
+  .recommended-10-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-10-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-10-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-10 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-11 {
+    background: url('/images/recommended-11.webp');
+    position: relative;
+  }
+
+  .recommended-11-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-11-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-11-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-11 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-12 {
+    background: url('/images/recommended-12.webp');
+    position: relative;
+  }
+
+  .recommended-12-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-12-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-12-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-12 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-13 {
+    background: url('/images/recommended-13.webp');
+    position: relative;
+  }
+
+  .recommended-13-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-13-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-13-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-13 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-14 {
+    background: url('/images/recommended-14.webp');
+    position: relative;
+  }
+
+  .recommended-14-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-14-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-14-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-14 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-15 {
+    background: url('/images/recommended-15.webp');
+    position: relative;
+  }
+
+  .recommended-15-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-15-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-15-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-15 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-16 {
+    background: url('/images/recommended-16.webp');
+    position: relative;
+  }
+
+  .recommended-16-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-16-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-16-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-16 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-17 {
+    background: url('/images/recommended-17.webp');
+    position: relative;
+  }
+
+  .recommended-17-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-17-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-17-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-17 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-18 {
+    background: url('/images/recommended-18.webp');
+    position: relative;
+  }
+
+  .recommended-18-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-18-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-18-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-18 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-19 {
+    background: url('/images/recommended-19.webp');
+    position: relative;
+  }
+
+  .recommended-19-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-19-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-19-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-19 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-20 {
+    background: url('/images/recommended-20.webp');
+    position: relative;
+  }
+
+  .recommended-20-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-20-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-20-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-20 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-21 {
+    background: url('/images/recommended-21.webp');
+    position: relative;
+  }
+
+  .recommended-21-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-21-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-21-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-21 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-22 {
+    background: url('/images/recommended-22.webp');
+    position: relative;
+  }
+
+  .recommended-22-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-22-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-22-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-22 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-23 {
+    background: url('/images/recommended-23.webp');
+    position: relative;
+  }
+
+  .recommended-23-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-23-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-23-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-23 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-24 {
+    background: url('/images/recommended-24.webp');
+    position: relative;
+  }
+
+  .recommended-24-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-24-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-24-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-24 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .fa-circle {
+    position: absolute;
+    top: 0.9em;
+    right: 0.45em;
+  }
+
+  .fa-bookmark {
+    position: absolute;
+    top: 1.25em;
+    right: 0.9em;
+  }
+
+  .fa-video-slash {
+    position: absolute;
+    bottom: 2.25em;
+    right: 0.9em;
+  }
+}
+
+/******************** MEDIA QUERRY - MIN 1024 PX ********************/
+
+@media (min-width: 1024px) {
+  html {
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  body {
+    position: relative;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: 15% 85%;
+  }
+
+  h3 {
+    font-size: 1em;
+  }
+
+  p,
+  li {
+    font-size: 0.8em;
+  }
+
+  h4 {
+    font-size: 0.9em;
+  }
+
+  nav {
+    height: 95vh;
+    display: grid;
+  }
+
+  .first-icon {
+    margin: -7.5em auto 0 auto;
+  }
+
+  .middle-icons {
+    margin: -15em auto 0 auto;
+    display: grid;
+  }
+
+  .middle-icons > div {
+    margin: 0 auto 2em auto;
+  }
+
+  .last-icon {
+    width: 2.75em;
+    height: 2.75em;
+    margin: 0 auto -7.5em auto;
+  }
+
+  .search-box {
+    padding: 1em;
+    margin: 0.5em 0;
+    position: relative;
+  }
+
+  .fa-solid.fa-magnifying-glass {
+    position: absolute;
+    top: 50%;
+    left: 4%;
+  }
+
+  .trending {
+    padding: 1em;
+  }
+
+  .trending-movies {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+  }
+
+  .trending-1 {
+    width: 100%;
+    height: 10em;
+    border-radius: 0.75em;
+    background: url('/images/trending-1.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
+
+  .trending-1-intro-header {
+    display: flex;
+    position: absolute;
+    top: 60%;
+    left: 5%;
+  }
+
+  .trending-1-intro-header p {
+    margin-right: 2em;
+  }
+
+  .trending-1-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .trending-1 h4 {
+    position: absolute;
+    top: 75%;
+    left: 5%;
+  }
+
+  .trending-2 {
+    width: 100%;
+    height: 10em;
+    border-radius: 0.75em;
+    background: url('/images/trending-2.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    left: 5%;
+  }
+
+  .trending-2-intro-header {
+    display: flex;
+    position: absolute;
+    top: 60%;
+    left: 5%;
+  }
+
+  .trending-2-intro-header p {
+    margin-right: 2em;
+  }
+
+  .trending-2-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .trending-2 h4 {
+    position: absolute;
+    top: 75%;
+    left: 5%;
+  }
+
+  .trending-3 {
+    visibility: visible;
+  }
+
+  .trending-3 {
+    width: 100%;
+    height: 10em;
+    border-radius: 0.75em;
+    background: url('/images/trending-3.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    left: 85%;
+  }
+
+  .trending-3-intro-header {
+    display: flex;
+    position: absolute;
+    top: 60%;
+    left: 2%;
+  }
+
+  .trending-3-intro-header p {
+    margin-right: 2em;
+  }
+
+  .trending-3-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .trending-3 h4 {
+    position: absolute;
+    top: 75%;
+    left: 2%;
+  }
+
+  .recommended {
+    padding: 1em;
+    margin-bottom: 3em;
+  }
+
+  .recommended-movies {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1em;
+  }
+
+  .recommended-movies > div {
+    height: 7.5em;
+    margin-bottom: 4em;
+    border-radius: 0.75em;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .recommended-1 {
+    background: url('/images/recommended-1.webp');
+    position: relative;
+  }
+
+  .recommended-1-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-1-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-1-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-1 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-2 {
+    background: url('/images/recommended-2.webp');
+    position: relative;
+  }
+
+  .recommended-2-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-2-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-2-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-2 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-3 {
+    background: url('/images/recommended-3.webp');
+    position: relative;
+  }
+
+  .recommended-3-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-3-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-3-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-3 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-4 {
+    background: url('/images/recommended-4.webp');
+    position: relative;
+  }
+
+  .recommended-4-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-4-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-4-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-4 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-5 {
+    background: url('/images/recommended-5.webp');
+    position: relative;
+  }
+
+  .recommended-5-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-5-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-5-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-5 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-6 {
+    background: url('/images/recommended-6.webp');
+    position: relative;
+  }
+
+  .recommended-6-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-6-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-6-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-6 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-7 {
+    background: url('/images/recommended-7.webp');
+    position: relative;
+  }
+
+  .recommended-7-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-7-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-7-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-7 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-8 {
+    background: url('/images/recommended-8.webp');
+    position: relative;
+  }
+
+  .recommended-8-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-8-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-8-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-8 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-9 {
+    background: url('/images/recommended-9.webp');
+    position: relative;
+  }
+
+  .recommended-9-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-9-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-9-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-9 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-10 {
+    background: url('/images/recommended-10.webp');
+    position: relative;
+  }
+
+  .recommended-10-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-10-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-10-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-10 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-11 {
+    background: url('/images/recommended-11.webp');
+    position: relative;
+  }
+
+  .recommended-11-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-11-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-11-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-11 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-12 {
+    background: url('/images/recommended-12.webp');
+    position: relative;
+  }
+
+  .recommended-12-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-12-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-12-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-12 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-13 {
+    background: url('/images/recommended-13.webp');
+    position: relative;
+  }
+
+  .recommended-13-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-13-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-13-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-13 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-14 {
+    background: url('/images/recommended-14.webp');
+    position: relative;
+  }
+
+  .recommended-14-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-14-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-14-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-14 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-15 {
+    background: url('/images/recommended-15.webp');
+    position: relative;
+  }
+
+  .recommended-15-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-15-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-15-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-15 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-16 {
+    background: url('/images/recommended-16.webp');
+    position: relative;
+  }
+
+  .recommended-16-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-16-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-16-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-16 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-17 {
+    background: url('/images/recommended-17.webp');
+    position: relative;
+  }
+
+  .recommended-17-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-17-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-17-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-17 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-18 {
+    background: url('/images/recommended-18.webp');
+    position: relative;
+  }
+
+  .recommended-18-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-18-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-18-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-18 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-19 {
+    background: url('/images/recommended-19.webp');
+    position: relative;
+  }
+
+  .recommended-19-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-19-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-19-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-19 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-20 {
+    background: url('/images/recommended-20.webp');
+    position: relative;
+  }
+
+  .recommended-20-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-20-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-20-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-20 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-21 {
+    background: url('/images/recommended-21.webp');
+    position: relative;
+  }
+
+  .recommended-21-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-21-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-21-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-21 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-22 {
+    background: url('/images/recommended-22.webp');
+    position: relative;
+  }
+
+  .recommended-22-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-22-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-22-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-22 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-23 {
+    background: url('/images/recommended-23.webp');
+    position: relative;
+  }
+
+  .recommended-23-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-23-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-23-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-23 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .recommended-24 {
+    background: url('/images/recommended-24.webp');
+    position: relative;
+  }
+
+  .recommended-24-intro-header {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    left: 3%;
+  }
+
+  .recommended-24-intro-header p {
+    margin-right: 2em;
+  }
+
+  .recommended-24-intro-header li {
+    margin-right: 2em;
+    float: left;
+  }
+
+  .recommended-24 h4 {
+    position: absolute;
+    top: 135%;
+    left: 3%;
+  }
+
+  .fa-circle {
+    position: absolute;
+    top: 0.9em;
+    right: 0.45em;
+  }
+
+  .fa-bookmark {
+    position: absolute;
+    top: 1.25em;
+    right: 0.9em;
+  }
+
+  .fa-video-slash {
+    visibility: hidden;
+  }
+}
